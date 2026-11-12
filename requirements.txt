@@ -3,3 +3,6 @@ asyncua==1.1.5
 paho-mqtt==2.1.0
 protobuf==5.29.3
 pytest==8.3.4
+matplotlib==3.9.4
+pandas==2.2.3
+jupyterlab==4.3.4

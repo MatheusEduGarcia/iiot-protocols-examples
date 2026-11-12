@@ -23,6 +23,25 @@ them also runs as a test in CI.
 | 09 | [Historian and OEE](09-historian-and-oee/) | narrow time-series table, window functions, downtime Pareto, Availability x Performance x Quality |
 | 10 | [Alarm management (ISA-18.2)](10-alarms-isa-18-2/) | alarm states, acknowledge, deadband, on/off delay, shelving, alarm flood |
 
+## Study notebooks (pt-BR)
+
+Every example also has an **executed study notebook** in its folder, written in Portuguese as class material: concept first, then each step run with its output kept, and an interpretation of every result (plots included).
+
+| # | Notebook |
+|---|---|
+| 01 | [`01_estudo_modbus_tcp.ipynb`](01-modbus-tcp-basics/01_estudo_modbus_tcp.ipynb) |
+| 02 | [`02_estudo_tipos_de_dados_rtu.ipynb`](02-modbus-data-types-rtu/02_estudo_tipos_de_dados_rtu.ipynb) |
+| 03 | [`03_estudo_servidor_opcua.ipynb`](03-opcua-server-model/03_estudo_servidor_opcua.ipynb) |
+| 04 | [`04_estudo_cliente_opcua.ipynb`](04-opcua-client-subscriptions/04_estudo_cliente_opcua.ipynb) |
+| 05 | [`05_estudo_mqtt_qos_retain_lwt.ipynb`](05-mqtt-qos-retain-lwt/05_estudo_mqtt_qos_retain_lwt.ipynb) |
+| 06 | [`06_estudo_unified_namespace.ipynb`](06-unified-namespace/06_estudo_unified_namespace.ipynb) |
+| 07 | [`07_estudo_sparkplug_b.ipynb`](07-sparkplug-b/07_estudo_sparkplug_b.ipynb) |
+| 08 | [`08_estudo_gateway_modbus_mqtt.ipynb`](08-modbus-to-mqtt-gateway/08_estudo_gateway_modbus_mqtt.ipynb) |
+| 09 | [`09_estudo_historiador_oee.ipynb`](09-historian-and-oee/09_estudo_historiador_oee.ipynb) |
+| 10 | [`10_estudo_alarmes_isa_18_2.ipynb`](10-alarms-isa-18-2/10_estudo_alarmes_isa_18_2.ipynb) |
+
+The notebooks start their own Modbus and OPC UA servers in the background; 05 to 09 need the MQTT broker (`docker compose up -d`). Open them with `jupyter lab` from the repository root.
+
 ## How the pieces fit
 
 ```mermaid
