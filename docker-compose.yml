@@ -1,0 +1,7 @@
+# MQTT broker for examples 05 to 09
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0.20
+    command: mosquitto -c /mosquitto-no-auth.conf     # anonymous, listens on all interfaces
+    ports:
+      - "1883:1883"

@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: MQTT broker
+        run: sudo apt-get update -q && sudo apt-get install -y -q mosquitto && sudo systemctl start mosquitto
+      - run: pip install -r requirements.txt
+      - name: Run every example as a test
+        run: pytest -v tests
